@@ -24,7 +24,7 @@
     <!-- Responsive Style -->
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
+    
   </head>
   <body>
 
@@ -173,7 +173,8 @@
                 </ul>
               </div>
               <a href="https://docs.google.com/document/d/1q4F_BLkWHn-y7q0FPmZ2WZcc6Hx7sHVzJhnvVaswRls/edit?usp=sharing" class="btn btn-common"><i class="icon-paper-clip"></i> Download Resume</a>
-              <a href="#" class="btn btn-danger"><i class="icon-speech"></i> Contact Me</a>
+              <!-- <a href="#" class="btn btn-danger" id="btnContact"><i class="icon-speech"></i> Contact Me</a> -->
+              <button class="btn btn-danger" id="btnContact">Contact Me</button>
             </div>
           </div>   
         </div>
@@ -502,7 +503,37 @@
               <div class="contact-block">
                 <h2>Contact Form</h2><br>
                 <div class="text-center">
-                  <h2>Contact From Coming Soon!</h2>
+                  <form role="form" method="post" id="reused_form">
+
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <label for="message">
+                                Your Message:</label>
+                            <textarea class="form-control" type="textarea" name="message" id="message" maxlength="6000" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <label for="name">
+                                Your Name:</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <label for="email">
+                                Email:</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                    </div>
+        
+        
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <button type="submit" class="btn btn-common pull-right" >Send →</button>
+                        </div>
+                    </div>
+        
+                </form>
+          
                   <!-- <h4>Please, purchase full version to get all features and pages</h4><br>
                   <b>Including:</b>
                   <p>- 2 Homepage Variations</p>
@@ -598,6 +629,11 @@
     <script src="assets/js/nivo-lightbox.js"></script>
     <script src="assets/js/jquery.slicknav.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      document.getElementById('btnContact').onclick = function() {
+      document.getElementById('message').focus();
+  };
+      </script>
       
   </body>
 </html>
